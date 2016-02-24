@@ -35,7 +35,7 @@ class ApiController < ApplicationController
 
 
   def return_data
-    @ret = {success: false, :msg=>"Nenhum processo foi realizado"} if @ret.nil?
+    @ret = {success: false, :msg=>"Nothing was processed"} if @ret.nil?
     render json: @ret
     return false
   end   
