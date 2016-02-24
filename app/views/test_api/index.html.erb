@@ -1,0 +1,41 @@
+<h1>Ruby on Rails Challenge</h1>
+<p>Tests by Antonio Marcos</p>
+
+<hr />
+
+<h3>Test with curl (POST)</h3>
+
+<p> 
+<strong>Test (Get) </strong>
+<small>
+<i>Parameter "p" (string)</i></small>
+<br />
+curl -H "Content-Type: application/json" -X POST -d '{"p":"aba"}' http://localhost:3000/palindrome
+<br /><br />
+curl -H "Content-Type: application/json" -X POST -d '{"p":"macaco"}' http://localhost:3000/palindrome
+<br /><br />
+curl -H "Content-Type: application/json" -X POST -d '{"p":"A man, a plan, a canal, Panama!"}' http://localhost:3000/palindrome
+
+<br /><br />
+
+</p>
+
+<p>
+<strong>Reading (GET)</strong>
+<small>
+<i>No parameter</i></small>
+<br />
+curl -H "Content-Type: application/json" http://localhost:3000/palindrome
+</p>
+
+
+<p>
+<strong>Destroy (DELETE)</strong>
+<small>
+<i>Parameter "id" (integer)</i></small>
+<br />
+
+#curl -H "Content-Type: application/json" -X DELETE -d '{"id":1}' http://localhost:3000/palindrome
+<br />
+...
+</p>

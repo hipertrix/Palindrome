@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode 
+  pool: 5
+
+development:
+  <<: *default
+  database: palindrome_development
+  username: teste
+  password:  
+  host: localhost
+  port: 5432
+
+test:
+  <<: *default
+  database: palindrome_test
+  username: teste
+  password:  
+  host: localhost  
+
+production:
+  <<: *default
+  database: palindrome_development
+  username: palindrome
+  password: <%= ENV['DATABASE_PASSWORD'] %>
